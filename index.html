@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form-container login-container">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="validateLoginForm(event)">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error-message" class="error-message"></p>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a></p>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-container signup-container">
+            <h2>Create Account</h2>
+            <form id="signupForm" onsubmit="validateSignupForm(event)">
+                <div class="input-group">
+                    <label for="new-username">Username:</label>
+                    <input type="text" id="new-username" name="new-username" required>
+                </div>
+                <div class="input-group">
+                    <label for="new-password">Password:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="signup-error-message" class="error-message"></p>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+        </div>
+
+        <!-- Photo Section -->
+        <div class="photo-container">
+            <img src="login-image.jpg" alt="Login Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
